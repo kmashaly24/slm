@@ -3,7 +3,7 @@
 This phase continues pretraining `Qwen/Qwen2.5-1.5B` on finance text before any Egyptian stock questions. The method is QLoRA: the base model stays in 4-bit, and a LoRA adapter is the only part that is trained. The best adapter is then merged into 16-bit weights for supervised fine-tuning.
 
 Code is in `phase1/`. Raw text is in `mid_training_data/`.
-
+Download [mid_training_data.zip](https://drive.google.com/file/d/1tfqzLuzZm_eZN9WDQHbovIX0sDZxg61z/view?usp=sharing) and unzip it in this directory.
 ## How the data was created
 
 `phase1/build_dataset.py` reads three local sources and packs them into 2,048-token sequences. The target size is 30 million tokens. Books and articles are counted first. Filings fill whatever budget remains.
