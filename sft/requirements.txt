@@ -1,0 +1,12 @@
+yfinance
+requests
+python-dotenv
+google-genai
+unsloth
+torch
+transformers
+trl
+datasets
+peft
+bitsandbytes
+accelerate

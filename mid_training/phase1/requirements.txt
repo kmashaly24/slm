@@ -1,0 +1,9 @@
+unsloth
+torch
+transformers
+trl
+datasets
+peft
+bitsandbytes
+accelerate
+PyMuPDF

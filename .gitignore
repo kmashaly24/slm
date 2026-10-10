@@ -1,0 +1,50 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.python-version
+
+# Training caches and logs that are regenerated
+unsloth_compiled_cache/
+wandb/
+outputs/
+*.log
+
+# Model weights, adapters, and packed datasets
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+*.onnx
+mid_training/phase1/packed_dataset/
+mid_training/phase1/checkpoints/
+mid_training/phase1/final_adapter/
+mid_training/phase1/merged_16bit/
+sft/checkpoints/
+sft/final_adapter/
+sft/merged_16bit/
+sft/gguf/
+grpo/checkpoints/
+grpo/final_adapter/
+grpo/merged_16bit/
+grpo/gguf/
+
+# Raw pretraining text is large and local
+mid_training/mid_training_data/books/
+mid_training/mid_training_data/articles/
+mid_training/mid_training_data/corpus/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

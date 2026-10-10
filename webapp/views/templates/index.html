@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EGX Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="mark">EGX</span>
+      <div>
+        <h1>Local analyst</h1>
+        <p>Sixty sessions, a week of news, two answers, and the return class.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-card">
+      <label for="query">Stock</label>
+      <input id="query" type="search" placeholder="Name or ticker — CIB, Juhayna, COMI" autocomplete="off" spellcheck="false">
+      <ul id="matches" class="matches" hidden></ul>
+    </section>
+
+    <section id="case" class="case" hidden>
+      <div class="case-head">
+        <div class="identity">
+          <p id="symbol-chip" class="symbol-chip"></p>
+          <h2 id="company"></h2>
+          <p id="arabic" class="arabic"></p>
+          <div id="meta" class="chips"></div>
+        </div>
+        <div class="actions">
+          <label class="horizon">Horizon
+            <select id="horizon">
+              <option value="1">1 day</option>
+              <option value="3">3 days</option>
+              <option value="5" selected>5 days</option>
+              <option value="10">10 days</option>
+            </select>
+          </label>
+          <button id="analyze" type="button">Analyze</button>
+        </div>
+      </div>
+
+      <div class="boxes">
+        <article class="box">
+          <header class="box-head">
+            <h3>Price</h3>
+            <p>Last 60 sessions</p>
+          </header>
+          <div id="stats" class="stats"></div>
+          <div class="chart-wrap">
+            <canvas id="chart"></canvas>
+          </div>
+          <div id="closes" class="closes"></div>
+        </article>
+        <article class="box">
+          <header class="box-head">
+            <h3>News</h3>
+            <p>Last 7 days · edit any line</p>
+          </header>
+          <div id="news-view" class="news-view"></div>
+          <textarea id="news" hidden></textarea>
+        </article>
+      </div>
+
+      <p id="status" class="status" role="status"></p>
+      <div id="results" class="results"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

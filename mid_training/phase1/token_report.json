@@ -1,0 +1,10 @@
+{
+  "books_tokens": 967230,
+  "articles_tokens": 16588432,
+  "corpus_tokens": 12428145,
+  "grand_total_tokens": 29983807,
+  "target_tokens": 30000000,
+  "delta_vs_target": -16193,
+  "packed_sequences": 14647,
+  "max_seq_length": 2048
+}
